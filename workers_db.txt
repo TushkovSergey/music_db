@@ -1,0 +1,15 @@
+create table if not exists departments (
+	id serial primary key,
+	name_department varchar(20)
+);
+
+create table if not exists worker_info (
+	id serial primary key,
+	worker_name varchar(20),
+	id_department integer references departments(id)
+);
+
+create table if not exists workers (
+	id_worker integer references worker_info(id),
+	id_boss integer references worker_info(id)
+);
