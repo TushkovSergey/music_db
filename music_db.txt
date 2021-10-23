@@ -5,22 +5,44 @@ create table if not exists genre (
 
 create table if not exists authors (
 	id serial primary key,
-	id_genre integer references genre(id),
 	author_name varchar(20) unique
 );
 
-create table if not exists album_list (
+create table if not exists authors_genre (
+	id_genre integer references genre(id),
+	id_authors integer references authors(id),
+	constraint genre_authors_pk primary key (id_genre, id_authors)
+);
+
+create table if not exists albums (
 	id serial primary key,
-	id_author integer references authors(id),
 	album_name varchar(20),
 	album_year integer,
 	check(album_year > 0)
 );
 
-create table if not exists track_list (
+create table if not exists authors_albums (
+	id_authors integer references authors(id),
+	id_albums integer references albums(id),
+	constraint authors_albums_pk primary key (id_authors, id_albums)
+);
+
+create table if not exists tracks (
 	id serial primary key,
-	id_album_list integer references album_list(id),
+	id_album integer references albums(id),
 	track_name varchar(20),
 	duration integer,
 	check(duration > 0)
+);
+
+create table if not exists collections (
+	id serial primary key,
+	collection_name varchar(20),
+	description text
+);
+
+create table if not exists track_collections (
+	id_collection integer references collections(id),
+	id_track integer references tracks(id),
+	constraint collection_track_pk primary key (id_collection, id_track)
 );
