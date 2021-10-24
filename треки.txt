@@ -1,0 +1,33 @@
+жанры: рок, альтернатива, поп, электронная, hip-hop
+
+сборник|альбом|год|автор|трэк|продолжительность|жанр
+-|noise|2004|archive|sleep|6:51|электронная
+-|noise|2004|archive|noise|6:44|электронная
+-|The Resistance|2009|Muse|Uprising||5:05|электронная, альтернатива
+-|The Resistance|2009|Muse|Resistance||5:47|электронная, альтернатива
+Greatest Hits Volume One - The SinglesThe|Let Love In|2006|Goo Goo Dolls|Let Love In|5:00|поп, рок
+Greatest Hits Volume One - The SinglesThe|Dizzy up the girl|1998|Goo Goo Dolls|Dizzy|2:41|поп, рок
+Female Rockers|Light me up|2010|The Pretty Reckless|Make Me Wanna Die|3:54|поп, рок
+The collection|Gangsta's Paradise|1995|Coolio, L.V.|The Pretty Reckless|Make Me Wanna Die|4:00|hip-hop
+PAY CLOSE ATTENTION: XL Recordings|21|2011|Adele|Rolling In The Deep|3:48|поп
+00's Best Of|Greatest Hitz|2005|Limp Bizkit|Take A Look Around|5:19|альтернатива
+00's Best Of|Ocean Eyes|2009|Owl City|Fireflies|3:47|поп
+Golden hits|Crazy world|1990|scorpions|wind of changes|5:11|рок
+-|Crazy world|1990|scorpions|Lust Or Love|4:22|рок
+00's Best Of|Greatest Hits: God's Favorite Band, Oh Love|2017, 2012|Green Day|Boulevard of Broken Dreams|4:22|рок
+Curtain Call: The Hits|8 Mile|2002|Eminem|Lose yourself|5:26|hip-hop
+
+Сборник:Greatest Hits Volume One - The SinglesThe, Female Rockers, The collection, PAY CLOSE ATTENTION: XL Recordings, 00's Best Of, Golden hits, Curtain Call: The Hits
+
+альбом: noise|2004, The Resistance|2009, Let Love In|2006|, Dizzy up the girl|1998, Light me up|2010, Gangsta's Paradise|1995, 21|2011, Greatest Hitz|2005, Ocean Eyes|2009, Crazy world|1990, Greatest Hits: God's Favorite Band|2017, Oh Love|2012, 8 Mile|2002
+
+авторы: archive, Muse, Goo Goo Dolls, The Pretty Reckless, Coolio, L.V., Adele, Limp Bizkit, Owl City, scorpions, Green Day, Eminem
+
+
+
+
+
+
+
+
+
