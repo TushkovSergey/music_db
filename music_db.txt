@@ -5,7 +5,7 @@ create table if not exists genre (
 
 create table if not exists authors (
 	id serial primary key,
-	author_name varchar(20) unique
+	author_name varchar(40) unique
 );
 
 create table if not exists authors_genre (
@@ -16,7 +16,7 @@ create table if not exists authors_genre (
 
 create table if not exists albums (
 	id serial primary key,
-	album_name varchar(20),
+	album_name varchar(40),
 	album_year integer,
 	check(album_year > 0)
 );
@@ -37,7 +37,7 @@ create table if not exists tracks (
 
 create table if not exists collections (
 	id serial primary key,
-	collection_name varchar(20),
+	collection_name varchar(40),
 	description text
 );
 
