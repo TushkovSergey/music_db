@@ -1,0 +1,86 @@
+select genre_name, count(id_authors) from authors_genre ag
+	join genre g 
+	on ag.id_genre = g.id 
+	group by genre_name
+;
+
+select count(track_name) from tracks t
+	join albums a
+	on a.id = t.id_album
+	where album_year between 2004 and 2017
+;
+	
+select album_name, avg(duration) from tracks t
+	join albums a
+	on a.id = t.id_album
+	group by album_name
+;
+
+select a.album_year, author_name from albums a
+	join authors_albums aa
+	on a.id = aa.id_albums 
+	join authors
+	on authors.id = aa.id_authors
+	where authors.id != 
+	(select authors_albums.id_authors from albums 
+	join authors_albums
+	on albums.id = authors_albums.id_albums
+	where album_year = 2020)	
+;
+
+select collection_name, author_name from collections c 
+	join track_collections tc 
+	on tc.id_collection = c.id 
+	join tracks tr
+	on tr.id = tc.id_track
+	join albums al 
+	on tr.id_album = al.id 
+	join authors_albums aa 
+	on aa.id_albums = al.id 
+	join authors au
+	on au.id = aa.id_authors 
+	where author_name = 'Green Day'
+	group by collection_name, author_name
+;
+
+select album_name, count(genre_name) from albums al
+	join authors_albums aa 
+	on aa.id_albums = al.id 
+	join authors au
+	on au.id = aa.id_authors
+	join authors_genre ag 
+	on ag.id_authors = au.id 
+	join genre g 
+	on g.id = ag.id_genre
+	group by album_name
+	having count(genre_name) > 1
+;
+
+select track_name from tracks t
+	left join track_collections tc 
+	on t.id = tc.id_track 
+	where tc.id_track is NULL
+;
+
+select author_name, track_name, duration from tracks tr
+	join albums al 
+	on tr.id_album = al.id 
+	join authors_albums aa 
+	on aa.id_albums = al.id 
+	join authors au
+	on au.id = aa.id_authors
+	where duration = (select min(duration) from tracks) 
+	;
+
+select album_name, count(track_name) from tracks tr
+	join albums al 
+	on tr.id_album = al.id
+	group by album_name
+	having count(track_name) = 
+	(select count(track_name) from tracks tr
+	join albums al 
+	on tr.id_album = al.id
+	group by album_name
+	order by count(track_name)
+	limit 1)
+	;
