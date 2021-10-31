@@ -21,7 +21,9 @@ INSERT INTO albums (album_name, album_year)
 		('Crazy world', 1990),
 		('Greatest Hits',2017), 
 		('Oh Love', 2012), 
-		('8 Mile', 2002);
+		('8 Mile', 2002),
+		('again', 2020)
+		;
 		
 INSERT INTO authors (author_name)    
 	VALUES('archive'), 
@@ -59,7 +61,11 @@ INSERT INTO tracks (id_album, track_name, duration)
 	(10, 'wind of changes', 5*60+11),
 	(11, 'Lust Or Love', 4*60+22),
 	(12, 'Boulevard of Broken Dreams', 4*60+22),
-	(13, 'Lose yourself', 5*60+26);
+	(13, 'Lose yourself', 5*60+26),
+	(2, 'MK Ultra', 4*60+06),
+	(6, 'smilin', 2*60+41),
+	(14, 'again', 6*60+47)
+	;
 
 INSERT INTO authors_genre (id_genre, id_authors)   
 	VALUES
@@ -95,7 +101,9 @@ INSERT INTO track_collections (id_collection, id_track)
 	(7, 12),
 	(1, 13),
 	(6, 14),
-	(8, 15);
+	(8, 15),
+	(1, 16)
+	;
 
 INSERT INTO authors_albums (id_authors, id_albums)   
 	VALUES
@@ -112,4 +120,6 @@ INSERT INTO authors_albums (id_authors, id_albums)
 	(10, 10),
 	(11, 11),
 	(11, 12),
-	(12, 13);
+	(12, 13),
+	(1, 14)
+	;
