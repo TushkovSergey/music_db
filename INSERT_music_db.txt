@@ -1,0 +1,115 @@
+INSERT INTO collections (collection_name)    
+	VALUES('The Best'),
+		('Greatest Hits'), 
+		('Female Rockers'), 
+		('The collection'), 
+		('PAY CLOSE'), 
+		('00s Best Of'), 
+		('Golden hits'), 
+		('Curtain Call');
+	
+INSERT INTO albums (album_name, album_year)    
+	VALUES('noise', 2004), 
+		('The Resistance', 2009), 
+		('Let Love In', 2006), 
+		('Dizzy up the girl', 1998), 
+		('Light me up', 2010), 
+		('Gangstas Paradise', 1995), 
+		('21', 2011),
+		('Greatest Hitz', 2005), 
+		('Ocean Eyes', 2009), 
+		('Crazy world', 1990),
+		('Greatest Hits',2017), 
+		('Oh Love', 2012), 
+		('8 Mile', 2002);
+		
+INSERT INTO authors (author_name)    
+	VALUES('archive'), 
+	('Muse'), 
+	('Goo Goo Dolls'), 
+	('The Pretty Reckless'), 
+	('Coolio'), 
+	('L.V.'), 
+	('Adele'), 
+	('Limp Bizkit'), 
+	('Owl City'), 
+	('scorpions'), 
+	('Green Day'), 
+	('Eminem');
+	
+INSERT INTO genre (genre_name)   
+	VALUES('rock'), 
+	('alternative'),
+	('pop'),
+	('electronic'),
+	('hip-hop');
+	
+INSERT INTO tracks (id_album, track_name, duration)   
+	VALUES
+	(1, 'noise', 6*60+44),
+	(2, 'Uprising', 5*60+5),
+	(2, 'Resistance', 5*60+47),
+	(3, 'Let Love In', 5*60),
+	(4, 'Dizzy', 2*60+41),
+	(5, 'Make Me Wanna Die', 3*60+54),
+	(6, 'Gangstas Paradise', 4*60),
+	(7, 'Rolling In The Deep', 3*60+48),
+	(8, 'Take A Look Around', 5*60+19),
+	(9, 'Fireflies', 3*60+47),
+	(10, 'wind of changes', 5*60+11),
+	(11, 'Lust Or Love', 4*60+22),
+	(12, 'Boulevard of Broken Dreams', 4*60+22),
+	(13, 'Lose yourself', 5*60+26);
+
+INSERT INTO authors_genre (id_genre, id_authors)   
+	VALUES
+	(4, 1),
+	(4, 2),
+	(3, 3),
+	(3, 4),
+	(5, 5),
+	(5, 6),
+	(3, 7),
+	(2, 8),
+	(3, 9),
+	(1, 10),
+	(1, 11),
+	(5, 12),
+	(2, 2),
+	(1, 3),
+	(1, 4);
+
+INSERT INTO track_collections (id_collection, id_track)   
+	VALUES
+	(1, 1),
+	(1, 2),
+	(1, 3),
+	(4, 4),
+	(2, 5),
+	(2, 6),
+	(3, 7),
+	(4, 8),
+	(5, 9),
+	(6, 10),
+	(6, 11),
+	(7, 12),
+	(1, 13),
+	(6, 14),
+	(8, 15);
+
+INSERT INTO authors_albums (id_authors, id_albums)   
+	VALUES
+	(1, 1),
+	(2, 2),
+	(3, 3),
+	(3, 4),
+	(4, 5),
+	(5, 6),
+	(6, 6),
+	(7, 7),
+	(8, 8),
+	(9, 9),
+	(10, 10),
+	(11, 11),
+	(11, 12),
+	(12, 13);
